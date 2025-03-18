@@ -5,11 +5,11 @@ Este es un proyecto desarrollado con Next.js, inicializado con create-next-app.
 Para iniciar el servidor de desarrollo, ejecuta:
 
 npm run dev
-# o
+# 
 yarn dev
-# o
+# 
 pnpm dev
-# o
+# 
 bun dev
 
 Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
