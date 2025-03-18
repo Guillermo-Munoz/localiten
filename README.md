@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ Proyecto Next.js - Juego de Búsqueda con GPS
+Este es un proyecto desarrollado con Next.js, inicializado con create-next-app.
 
-## Getting Started
+🚀 Comenzando
+Para iniciar el servidor de desarrollo, ejecuta:
 
-First, run the development server:
-
-```bash
+bash
+Copiar
+Editar
 npm run dev
-# or
+# o
 yarn dev
-# or
+# o
 pnpm dev
-# or
+# o
 bun dev
-```
+Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puedes comenzar a editar la página modificando app/page.tsx. Los cambios se actualizarán automáticamente.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este proyecto usa next/font para optimizar y cargar automáticamente Geist, una nueva familia tipográfica de Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎮 Sobre la Aplicación
+Esta aplicación es un juego interactivo de exploración con GPS. Los jugadores deben moverse por el mundo real para encontrar ítems virtuales escondidos en diferentes ubicaciones.
 
-## Learn More
+🔹 Características principales:
+Exploración con GPS: La app guía a los jugadores hasta los ítems cercanos mediante geolocalización.
+Mapas dinámicos: Visualiza los ítems en un mapa interactivo en tiempo real.
+Desafíos y recompensas: Encuentra y colecciona ítems únicos en distintos lugares.
+Interacción social: Posibilidad de competir con amigos o en eventos globales.
+📚 Más Información
+Para aprender más sobre Next.js, consulta los siguientes recursos:
 
-To learn more about Next.js, take a look at the following resources:
+Documentación de Next.js - Aprende sobre las funciones y la API de Next.js.
+Tutorial interactivo de Next.js - Aprende Next.js paso a paso con ejercicios prácticos.
+También puedes explorar el repositorio de Next.js en GitHub, donde se aceptan sugerencias y contribuciones.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🚀 Despliegue en Vercel
+La forma más sencilla de desplegar esta aplicación es utilizando la plataforma Vercel, creada por los mismos desarrolladores de Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Consulta nuestra documentación de despliegue para más detalles.
