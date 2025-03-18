@@ -4,9 +4,6 @@ Este es un proyecto desarrollado con Next.js, inicializado con create-next-app.
 🚀 Comenzando
 Para iniciar el servidor de desarrollo, ejecuta:
 
-bash
-Copiar
-Editar
 npm run dev
 # o
 yarn dev
@@ -14,6 +11,7 @@ yarn dev
 pnpm dev
 # o
 bun dev
+
 Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
 
 Puedes comenzar a editar la página modificando app/page.tsx. Los cambios se actualizarán automáticamente.
