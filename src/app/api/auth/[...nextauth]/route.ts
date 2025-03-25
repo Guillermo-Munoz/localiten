@@ -1,25 +1,54 @@
-import NextAuth from 'next-auth'; // Importa la librería NextAuth.js
-import GoogleProvider from 'next-auth/providers/google'; // Importa el proveedor de Google de NextAuth.js.
+import NextAuth from 'next-auth'; 
+import GoogleProvider from 'next-auth/providers/google';
+import { PrismaClient } from '@prisma/client';
 
-/**
- * Configura y exporta el manejador de NextAuth.js para la autenticación con Google.
- *
- * Este manejador utiliza el proveedor de Google para la autenticación OAuth 2.0.
- * Las credenciales del cliente de Google se obtienen de las variables de entorno.
- *
- * @type {import("next-auth").NextAuthHandler}
- */
+const prisma = new PrismaClient();
+
 const handler = NextAuth({
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string, // Obtiene el ID del cliente de Google de las variables de entorno.
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string, // Obtiene el secreto del cliente de Google de las variables de entorno.
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
+  callbacks: {
+    async signIn({ user }) {
+      try {
+        const existingUser = await prisma.user.findUnique({
+          where: { email: user.email ?? undefined },
+        });
+
+        if (!existingUser) {
+          const newUser = await prisma.user.create({
+            data: {
+              email: user.email!,
+              name: user.name!,
+            },
+          });
+          user.id = newUser.id; // Asignación correcta del ID
+        } else {
+          user.id = existingUser.id;
+        }
+        return true;
+      } catch (error) {
+        console.error("Error en signIn:", error);
+        return false;
+      }
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.sub = user.id;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.sub!;
+      }
+      return session;
+    }
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
-/**
- * Exporta el manejador para las solicitudes GET y POST.
- * Esto permite que NextAuth.js maneje las solicitudes de autenticación entrantes.
- */
 export { handler as GET, handler as POST };
