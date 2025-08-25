@@ -12,6 +12,8 @@ pnpm dev
 # 
 bun dev
 
+
+
 Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
 
 Puedes comenzar a editar la página modificando app/page.tsx. Los cambios se actualizarán automáticamente.
