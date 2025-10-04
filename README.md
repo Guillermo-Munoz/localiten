@@ -1,39 +1,68 @@
- Proyecto Next.js - Juego de Búsqueda con GPS
-Este es un proyecto desarrollado con Next.js, inicializado con create-next-app.
+ # Next.js GPS Treasure Hunt (Localiten)
 
-🚀 Comenzando
-Para iniciar el servidor de desarrollo, ejecuta:
+Juego interactivo de exploración con GPS desarrollado en Next.js. Los jugadores buscan ítems virtuales escondidos en ubicaciones reales y los visualizan en un mapa dinámico en tiempo real. Incluye desafíos, recompensas y posibilidad de interacción social.
+
+## 🚀 Comenzando
+
+Estas instrucciones te permitirán ejecutar el proyecto en tu máquina local para desarrollo y pruebas.
+
+### Prerrequisitos
+
+- Node.js v18+
+- npm / yarn / pnpm / bun
+- Conexión a internet para mapas y autenticación
+
+### Instalación
+
+Clona el repositorio:
+
+git clone https://github.com/tuusuario/nextjs-gps-treasure-hunt.git
+cd nextjs-gps-treasure-hunt
+
+Instala dependencias:
+
+npm install
+# o
+yarn install
+# o
+pnpm install
+# o
+bun install
+
+### Ejecutar servidor de desarrollo
 
 npm run dev
-# 
+# o
 yarn dev
-# 
+# o
 pnpm dev
-# 
+# o
 bun dev
 
-Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
+Abre http://localhost:3000 en tu navegador para ver la aplicación funcionando. Los cambios se actualizarán automáticamente.
 
-Puedes comenzar a editar la página modificando app/page.tsx. Los cambios se actualizarán automáticamente.
+## 🎮 Funcionalidades
 
-Este proyecto usa next/font para optimizar y cargar automáticamente Geist, una nueva familia tipográfica de Vercel.
+- Exploración con GPS: guía a los jugadores hacia ítems cercanos usando geolocalización.  
+- Mapas dinámicos: visualiza los ítems en un mapa interactivo en tiempo real.  
+- Desafíos y recompensas: encuentra y colecciona ítems únicos en distintos lugares.  
+- Interacción social: posibilidad de competir con amigos o en eventos globales.
 
-🎮 Sobre la Aplicación
-Esta aplicación es un juego interactivo de exploración con GPS. Los jugadores deben moverse por el mundo real para encontrar ítems virtuales escondidos en diferentes ubicaciones.
+## 🛠 Tecnologías
 
-🔹 Características principales:
-Exploración con GPS: La app guía a los jugadores hasta los ítems cercanos mediante geolocalización.
-Mapas dinámicos: Visualiza los ítems en un mapa interactivo en tiempo real.
-Desafíos y recompensas: Encuentra y colecciona ítems únicos en distintos lugares.
-Interacción social: Posibilidad de competir con amigos o en eventos globales.
-📚 Más Información
-Para aprender más sobre Next.js, consulta los siguientes recursos:
+- Next.js  
+- TypeScript  
+- NextAuth.js (autenticación)  
+- Prisma & SQLite (gestión de datos)  
+- Geolocation API  
+- Vercel (despliegue)
 
-Documentación de Next.js - Aprende sobre las funciones y la API de Next.js.
-Tutorial interactivo de Next.js - Aprende Next.js paso a paso con ejercicios prácticos.
-También puedes explorar el repositorio de Next.js en GitHub, donde se aceptan sugerencias y contribuciones.
+## 📚 Más información
 
-🚀 Despliegue en Vercel
-La forma más sencilla de desplegar esta aplicación es utilizando la plataforma Vercel, creada por los mismos desarrolladores de Next.js.
+- Documentación de Next.js: https://nextjs.org/docs  
+- Next.js GitHub: https://github.com/vercel/next.js  
+- Prisma Docs: https://www.prisma.io/docs/
 
-Consulta nuestra documentación de despliegue para más detalles.
+## 🚀 Despliegue
+
+La forma más sencilla de desplegar la aplicación es usando Vercel. Consulta la documentación de despliegue de Next.js para más detalles: https://nextjs.org/docs/deployment
