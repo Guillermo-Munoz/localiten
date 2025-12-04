@@ -1,4 +1,4 @@
- # Next.js GPS Treasure Hunt (Localiten)
+# Next.js GPS Treasure Hunt (Localiten)
 
 Juego interactivo de exploración con GPS desarrollado en Next.js. Los jugadores buscan ítems virtuales escondidos en ubicaciones reales y los visualizan en un mapa dinámico en tiempo real. Incluye desafíos, recompensas y posibilidad de interacción social.
 
