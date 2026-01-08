@@ -66,3 +66,4 @@ Abre http://localhost:3000 en tu navegador para ver la aplicación funcionando. 
 ## 🚀 Despliegue
 
 La forma más sencilla de desplegar la aplicación es usando Vercel. Consulta la documentación de despliegue de Next.js para más detalles: https://nextjs.org/docs/deployment
+
